@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-
+import configData from './config.json'
 const Room = (props) => {
     const userVideo = useRef()
     const userStream = useRef()
@@ -33,7 +33,7 @@ const Room = (props) => {
             userStream.current = stream
 
             webSocketRef.current = new WebSocket(
-                `ws://localhost:8000/join?roomID=${props.match.params.roomID}`
+                configData.REACT_APP_WEBSOCKET_URL + `join?roomID=${props.match.params.roomID}`
             )
 
             webSocketRef.current.addEventListener("open", () => {
@@ -102,7 +102,7 @@ const Room = (props) => {
     const createPeer = () => {
         console.log("Creating peer connection")
         const peer = new RTCPeerConnection({
-            iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+            iceServers: [{ urls: configData.REACT_APP_RTC_PEER_CONNECTION_URL }]
         })
 
         peer.onnegotiationneeded = handleNegotiationNeeded
