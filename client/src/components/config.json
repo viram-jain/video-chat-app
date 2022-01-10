@@ -1,5 +1,5 @@
 {
-    "REACT_APP_URL": "https://viram-jain-video-chat-app.herokuapp.com",
-    "REACT_APP_WEBSOCKET_URL": "https://viram-jain-video-chat-app.herokuapp.com",
+    "REACT_APP_URL": "https://viram-jain-video-chat-app.herokuapp.com/",
+    "REACT_APP_WEBSOCKET_URL": "https://viram-jain-video-chat-app.herokuapp.com/",
     "REACT_APP_RTC_PEER_CONNECTION_URL": "stun:stun.l.google.com:19302"
 }
