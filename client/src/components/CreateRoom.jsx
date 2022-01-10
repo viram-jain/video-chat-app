@@ -2,8 +2,8 @@ import React from 'react'
 import configData from './config.json'
 
 const CreateRoom = (props) => {
-    const create = async (e) => {
-        e.preventDefault();
+    const create = async event => {
+        event.preventDefault();
 
         const resp = await fetch(configData.REACT_APP_URL + "create");
         const { room_id } = await resp.json();
