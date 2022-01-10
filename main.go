@@ -4,7 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/viramjainkaleyra/video-chat-app/server"
+	"video-chat-app/server"
+
 	"go.uber.org/zap"
 )
 
