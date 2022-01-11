@@ -53,6 +53,7 @@ func broadcaster() {
 					zap.L().Error("broadcaster error",
 						zap.Any("WriteJSON error", err.Error()))
 					client.Conn.Close()
+					break
 				}
 			}
 		}
