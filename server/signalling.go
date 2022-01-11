@@ -86,6 +86,7 @@ func JoinRoomRequestHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			zap.L().Error("JoinRoomRequestHandler error",
 				zap.Any("ReadJSON error", err.Error()))
+			break
 		}
 
 		msg.Client = ws
